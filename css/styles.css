@@ -230,19 +230,35 @@ section {
 /* HEADER */
 
 #header {
-	background: url(../images/logo.jpg) no-repeat center center;
+	background: url(../images/logo2.jpg) no-repeat center center;
 	background-size: cover;
 	height: 100vh;
 	padding: 0px;
 }
 
 #header .container {
-	background: url(../images/body-bg1.png) repeat 0 0;
-	height: 100vh;
-	width: 100% !important;
-	padding: 0px;	
-	z-index: 998;
+    background: url(../images/header-back.png) repeat 0 0;
+    height: 100vh;
+    width: 100% !important;
+    padding: 0px;
+    z-index: 998;
 }
+
+/* For mobile devices */
+@media (max-width: 768px) {
+    #header .container {
+        height: 50vh; /* half screen height */
+        background-size: cover; /* make sure the image scales well */
+    }
+}
+
+@media (max-width: 480px) {
+    #header .container {
+        height: 200px; /* fixed height for very small screens */
+        background-size: cover;
+    }
+}
+  
 
 #header .col-md-8 {
 	top: 20%;
@@ -316,10 +332,28 @@ section {
 /* SUBSCRIBE */
 
 #subscribe {
-	background: url(../images/bg-subscribe.jpg) no-repeat fixed center center / cover rgba(0, 0, 0, 0);
-	padding: 0px;
-	min-height: 430px;
+    background: url(../images/bg-subscribe.jpg) no-repeat center center / cover;
+    padding: 0;
+    min-height: 430px;
 }
+
+/* Tablet */
+@media (max-width: 768px) {
+    #subscribe {
+        min-height: 300px;
+        background-attachment: scroll; /* fixes mobile issue */
+    }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+    #subscribe {
+        min-height: 200px; /* reduce height */
+        background-attachment: scroll; 
+        background-size: cover; /* keeps it proportional */
+    }
+}
+
 
 #subscribe .icontop {
 	position: absolute;
@@ -388,10 +422,28 @@ section {
 /* contacts */
 
 #contacts {
-	background: url(../images/56.jpg) no-repeat fixed center center / cover cornsilk;
-	padding: 0px;
-	min-height: 430px;
+    background: url(../images/56.jpg) no-repeat center center / cover cornsilk;
+    padding: 0;
+    min-height: 430px;
 }
+
+/* Tablet */
+@media (max-width: 768px) {
+    #contacts {
+        min-height: 300px;
+        background-attachment: scroll; /* fixes background issue on mobile */
+    }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+    #contacts {
+        min-height: 200px; /* shorter for small screens */
+        background-attachment: scroll;
+        background-size: cover; /* scales image nicely */
+    }
+}
+
 
 #contacts .icontop {
 	position: absolute;
