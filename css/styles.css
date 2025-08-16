@@ -247,9 +247,9 @@ section {
 /* For mobile devices */
 @media (max-width: 768px) {
     #header .container {
-        background: url(../images/bsbild_fullhd_01.jpg) no-repeat center center;
+        background: url(../images/header-back3.jpg) no-repeat center center;
         /* background-size: cover;   makes it fill full width */
-        width: 100%;
+        width: 100% !important;
         background-attachment: scroll; /* works better on mobile */
     }
 }
