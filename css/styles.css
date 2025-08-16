@@ -247,14 +247,15 @@ section {
 /* For mobile devices */
 @media (max-width: 768px) {
     #header .container {
-        height: 50vh; /* half screen height */
-        background-size: cover; /* make sure the image scales well */
+        min-height: 200px;
+        background-attachment: scroll;/* make sure the image scales well */
     }
 }
 
 @media (max-width: 480px) {
     #header .container {
-        height: 200px; /* fixed height for very small screens */
+        min-height: 200px; /* reduce height */
+        background-attachment: scroll; 
         background-size: cover;
     }
 }
