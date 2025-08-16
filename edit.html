@@ -48,17 +48,17 @@
 		
 		<h4 class="white-smoke" style="color: rgb(60, 63, 60);">রাজশাহী প্রকৌশল ও প্রযুক্তি বিশ্ববিদ্যালয়ের একটি স্বেচ্ছাসেবী সংগঠন</h4>
 	</div>
-		<br>
+
    
     <h3 class="white-smoke" style="color:rgb(117, 11, 11);"><b>To edit the registered form,  <a href="https://forms.gle/QsLHa1nz52V9pGHj6">click here</a> and you will get the below message.</b></h3>
-    
+    		<br>
        </div>
 
 
-<div class="text-center position-relative">
+<div class="gallery"  >
   <div class="d-inline-block p-9">
-    <img src="images/gallary/respond.png" alt="" 
-         style="max-width:70%; height:auto; display:block; margin:auto;">
+    <a href="https://forms.gle/QsLHa1nz52V9pGHj6"><img src="images/gallary/respond.png" alt="" 
+         style="max-width:50%; height:auto; display:block; margin:auto;"></a>
   </div>
 </div>
 
@@ -115,34 +115,35 @@ body {
   .byebye:hover {
     transform: scale(0.2) !important;
   }
-  .gallery {
-    display: grid;
-    grid-column-gap: 8px;
-    grid-row-gap: 8px;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    grid-auto-rows: 8px;
-  }
-  .gallery img {
-    max-width: 100%;
-    border-radius: 8px;
-    box-shadow: 0 0 16px #333;
-    transition: all 1.5s ease;
-  }
-  .gallery img:hover {
-    box-shadow: 0 0 32px #333;
-  }
-  .gallery .content {
-    padding: 4px;
-  }
-  .gallery .gallery-item {
-    transition: grid-row-start 300ms linear;
-    transition: transform 300ms ease;
-    transition: all 0.5s ease;
-    cursor: pointer;
-  }
-  .gallery .gallery-item:hover {
-    transform: scale(1.025);
-  }
+.gallery img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 0 16px #333;
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+  cursor: zoom-in;
+}
+
+.gallery img:hover {
+  transform: scale(1.1);   /* zoom in */
+  box-shadow: 0 0 32px #000;
+  z-index: 10;             /* make sure it appears above neighbors */
+  position: relative;
+}
+
+
+.gallery .content {
+  padding: 4px;
+}
+
+.gallery .gallery-item {
+  transition: transform 0.5s ease;
+  cursor: pointer;
+}
+
+.gallery .gallery-item:hover {
+  transform: scale(1.025);
+}
   @media (max-width: 600px) {
     .gallery {
       grid-template-columns: repeat(auto-fill, minmax(30%, 1fr));
