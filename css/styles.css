@@ -39,7 +39,7 @@ a, a:hover, a:active, a:focus {
 	cursor: pointer;
 }
 .btn {
-	background-color: rgb(117, 11, 11);
+	background-color: rgb(87, 8, 8);
 	border: none;
 	color: white;
 	padding: 12px 16px;
@@ -252,7 +252,23 @@ section {
         width: 100% !important;
         background-attachment: scroll; /* works better on mobile */
     }
-}
+	.hide-on-mobile {
+   	 display: none !important;
+  							}
+							.show-on-mobile {
+ 				   display: inline !important; /* show only on mobile */
+  							}
+	}
+	.show-on-mobile {
+  		display: none; /* hidden by default (desktop) */
+			  	            }
+
+
+						
+					
+				
+							
+
 
 
 @media (max-width: 480px) {
@@ -639,9 +655,9 @@ section {
 	}
 }
 
-/*dropdown arif*/
+/*dropdown arif     rgb(117, 11, 11) */ 
 .dropbtn {
-	background-color: rgb(117, 11, 11);
+	background-color: rgb(87, 8, 8); 
 	color: white;
 	padding: 16px;
 	font-size: 16px;
@@ -656,7 +672,7 @@ section {
   .dropdown-content {
 	display: none;
 	position: absolute;
-	background-color: rgb(117, 11, 11);
+	background-color: rgb(87, 8, 8);
 	min-width: 25px;
 	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 	z-index: 1;
